@@ -1,0 +1,88 @@
+.listProducts {
+  width: 90%;
+  height: 54vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 22vh;
+  left: 5%;
+}
+
+.titleSection {
+  margin: 10px;
+  margin-bottom: 20px;
+  font-size: 5vh;
+}
+
+mark {
+  padding-left: 2%;
+  padding-right: 2%;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(204, 2, 2);
+}
+
+.productsView {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 100%;
+}
+
+.products {
+  margin: 0;
+  margin-bottom: 15px;
+  height: 100%;
+  overflow-y: scroll;
+  padding-left: 8%;
+  padding-right: 5%;
+  text-align: justify;
+  font-size: 3vh;
+}
+
+li {
+  padding-bottom: 8px;
+}
+
+.ListA:hover {
+  color: rgb(204, 2, 2);
+  cursor: pointer;
+}
+
+.pictureSpace {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 55% 45%;
+}
+
+.initialSpace {
+  grid-row: span 2 / 3;
+  font-size: 5vh;
+  padding: 5%;
+  align-self: center;
+}
+
+.imageClass {
+  justify-self: center;
+  align-self: center;
+  padding: 5%;
+  height: 90%;
+  max-width: 80%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.textClass {
+  align-self: center;
+  justify-self: center;
+  text-align: justify;
+  font-size: 2.2vh;
+  padding: 10px;
+  width: 80%;
+  height: 80%;
+  grid-column: 1;
+  grid-row: 2;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}

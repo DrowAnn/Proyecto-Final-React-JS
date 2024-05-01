@@ -1,0 +1,40 @@
+.container {
+  height: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 50% 50%;
+}
+
+.pictureClass {
+  grid-column: 1;
+  grid-row: span 2 / 3;
+  width: 9vh;
+  height: 8vh;
+  object-fit: contain;
+  justify-self: center;
+  align-self: center;
+}
+
+.titleClass {
+  margin: 0;
+  padding: 0;
+  justify-self: left;
+  align-self: center;
+  grid-column: 2;
+  grid-row: 1;
+  font-weight: bolder;
+  font-size: 2vw;
+  color: rgb(204, 2, 2);
+}
+
+.descriptionClass {
+  margin: 0;
+  padding: 0;
+  justify-self: left;
+  align-self: center;
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 1.2vw;
+  color: rgb(255, 255, 255, 0.6);
+}

@@ -44,7 +44,7 @@ function ProductsList() {
   return (
     <div className="listProducts">
       <h1 className="titleSection">
-        <mark>Product List</mark>
+        Product <span>L</span>ist
       </h1>
       <div className="products">
         <CountProducts listMap={products} />

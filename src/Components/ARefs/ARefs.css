@@ -19,13 +19,9 @@
 }
 
 .headerRefs:active {
-  /* border: 2px solid rgb(204, 2, 2, 1);
-  transform: translateY(4px);
-  box-shadow: none; */
-  background-color: black;
-  color: rgba(255, 255, 255, 0.87);
   border: 2px solid rgb(204, 2, 2, 1);
-  box-shadow: 0px 2px 2px 1px black, 0px 4px 1px 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
 .shoppingCartContainer {
@@ -45,7 +41,8 @@
   width: 2.5vw;
   color: white;
   position: absolute;
-  bottom: 4%;
+  bottom: 3.5%;
   left: 25%;
   z-index: 1;
+  color: rgb(255, 0, 0, 1);
 }

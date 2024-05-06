@@ -6,36 +6,3 @@
   justify-content: center;
   margin: 0;
 }
-
-.backToHomeButton {
-  background-color: black;
-  border-radius: 20px;
-  border: 2px solid black;
-  padding: 0.6em 1.2em;
-  font-size: 2.5vh;
-  font-weight: 500;
-  font-family: inherit;
-  text-decoration: none;
-  transition: border-color 0.25s;
-  height: fit-content;
-  position: absolute;
-  top: 14vh;
-  left: 5%;
-}
-
-.backToHomeButton:hover {
-  border: solid rgb(204, 2, 2);
-  border-width: 2px;
-  box-shadow: 0px 2px 2px 1px black, 0px 4px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-.backToHomeButton:focus {
-  border: solid rgb(204, 2, 2);
-  border-width: 2px;
-  transform: translateY(4px);
-  box-shadow: none;
-}
-
-.backToHomeButton:visited {
-  color: rgba(255, 255, 255, 0.5);
-}

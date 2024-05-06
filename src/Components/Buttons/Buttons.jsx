@@ -1,11 +1,18 @@
+import { Link } from "react-router-dom";
 import "./Buttons.css";
 
-const Button = (props) => {
+export const ButtonLink = (props) => {
   return (
-    <button onClick={props.onClick} style={props.style}>
+    <Link className="buttonLink" to={props.to} style={props.style}>
+      {props.message}
+    </Link>
+  );
+};
+
+export const ActionButton = (props) => {
+  return (
+    <button className="buttonLink" onClick={props.onClick} style={props.style}>
       {props.message}
     </button>
   );
 };
-
-export default Button;

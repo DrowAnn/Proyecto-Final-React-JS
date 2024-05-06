@@ -1,14 +1,15 @@
 import "./Footer.css";
-import { HighlightsContent } from "/src/App.jsx";
 import SpecialFeatures from "../SpecialFeatures/SpecialFeatures.jsx";
-import { useContext } from "react";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const highlightsContent = useContext(HighlightsContent);
+  const features = useSelector((state) => {
+    return state.SpecialFeaturesContent.features;
+  });
 
   return (
     <div className="footerDiv">
-      {highlightsContent.map((props) => {
+      {features.map((props) => {
         return (
           <div key={props.id}>
             <SpecialFeatures

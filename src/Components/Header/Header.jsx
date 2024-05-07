@@ -4,7 +4,11 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const count = useSelector((state) => {
-    return [...state.ShoppingCart.products].length;
+    let value = 0;
+    [...state.ShoppingCart.products].map((product) => {
+      value += product[1];
+    });
+    return value;
   });
 
   return (

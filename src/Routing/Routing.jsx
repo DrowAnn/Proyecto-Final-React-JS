@@ -6,6 +6,7 @@ import ProductsView from "../Views/ProductsView/ProductsView";
 import ShoppingCart from "../Views/ShoppingCart/ShoppingCart";
 import ContactUs from "../Views/ContactUs/ContactUs";
 import ProductDetails from "../Views/ProductDetails/ProductDetails";
+import Checkout from "../Views/Checkout/Checkout";
 
 const AppRouting = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouting = () => {
         <Route path="ContactUs" element={<ContactUs />} />
         <Route path="ShoppingCart" element={<ShoppingCart />} />
         <Route path="Product/:id" element={<ProductDetails />} />
+        <Route path="Checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,8 +1,10 @@
+import TriangleDecoration from "../../Components/TrianglesDecoration/TrianglesDecoration";
 import "./ContactUs.css";
 
 const ContactUs = () => {
   return (
     <div className="contactUs">
+      <TriangleDecoration />
       <h1>
         Robert <span>D</span>elgado's Store
       </h1>

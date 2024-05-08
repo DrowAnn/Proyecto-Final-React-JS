@@ -29,7 +29,8 @@ const ListShoppingCart = ({ addedProducts }) => {
                   Unit Price: ${parseFloat(product[0].price).toFixed(
                     2
                   )} USD <br />
-                  Amount: {product[1]}
+                  Amount:{" "}
+                  <span style={{ fontWeight: "1000" }}>{product[1]}</span>
                 </p>
               </div>
               <p style={{ textAlign: "center" }}>
@@ -84,9 +85,7 @@ const ShoppingCart = () => {
           <ListShoppingCart addedProducts={addedProducts} />
         </ul>
       </div>
-      <h1 className="priceContainer">
-        Total <span>P</span>rice: ${totalPriceCalc()} USD
-      </h1>
+      <h1 className="priceContainer">Total Price: ${totalPriceCalc()} USD</h1>
       <ButtonLink to="/Checkout" message="Ready To Pay" />
     </div>
   );

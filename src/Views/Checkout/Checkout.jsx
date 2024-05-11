@@ -1,8 +1,17 @@
+import { ButtonLink } from "../../Components/Buttons/Buttons";
 import "./Checkout.css";
+
 const Checkout = () => {
   return (
     <div className="checkout">
-      <h1>Holiwis</h1>
+      <ButtonLink
+        message="Back To Shopping Cart"
+        to="/ShoppingCart"
+        style={{ position: "absolute", top: "14vh", left: "5%" }}
+      />
+      <h1>
+        Payment <span>F</span>orm
+      </h1>
     </div>
   );
 };

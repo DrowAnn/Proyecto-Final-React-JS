@@ -7,6 +7,7 @@ import ShoppingCart from "../Views/ShoppingCart/ShoppingCart";
 import ContactUs from "../Views/ContactUs/ContactUs";
 import ProductDetails from "../Views/ProductDetails/ProductDetails";
 import Checkout from "../Views/Checkout/Checkout";
+import OrderConfirmation from "../Views/OrderConfirmation/OrderConfirmation";
 
 const AppRouting = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouting = () => {
         <Route path="ShoppingCart" element={<ShoppingCart />} />
         <Route path="Product/:id" element={<ProductDetails />} />
         <Route path="Checkout" element={<Checkout />} />
+        <Route path="OrderConfirmation" element={<OrderConfirmation />} />
       </Routes>
       <Footer />
     </BrowserRouter>

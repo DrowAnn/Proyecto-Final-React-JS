@@ -1,0 +1,23 @@
+.orderConfirmation {
+  height: 66vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12vh;
+}
+
+.orderConfirmation p {
+  font-size: 2.8vh;
+  width: 60%;
+  text-align: justify;
+  background-color: rgb(0, 0, 0, 0.8);
+  padding: 2vw;
+  margin: 0.5vw;
+  border-radius: 2vw;
+}
+
+.orderConfirmation span {
+  color: rgb(204, 2, 2);
+}

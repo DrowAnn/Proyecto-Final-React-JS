@@ -1,8 +1,60 @@
 .paymentForm {
-  font-size: 5vw;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.87);
+  padding: 3vw;
+  padding-bottom: 0.5vw;
+  border-radius: 2vw;
+  border: 0.3vw solid rgba(204, 2, 2);
+  box-shadow: 0vw 0vw 1.2vw 0.6vw black;
   margin: 0vh;
+  margin-top: 2vh;
+  width: 50vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .paymentForm h1 {
+  font-size: 3vw;
+  margin: 0vw;
+  margin-bottom: 1.4vw;
+}
+
+.paymentForm label {
   margin: 0vh;
+  font-size: 1.8vw;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 8%;
+  margin-bottom: 1.5vh;
+  width: 92%;
+  background-color: rgba(204, 2, 2, 0.95);
+}
+
+.paymentForm input {
+  font-size: 1.8vw;
+  width: 23vw;
+  height: fit-content;
+  background-color: rgb(46, 46, 46);
+  border: 0.3vw solid rgba(46, 46, 46);
+  text-align: center;
+  margin-bottom: 1.5vh;
+}
+
+.paymentForm input:focus {
+  outline: none;
+  border: 0.3vw solid rgba(204, 2, 2);
+}
+
+.data {
+  margin: 1vw;
+  display: grid;
+  width: 80%;
+  height: 100%;
+  grid-template-columns: 39% 61%;
+  grid-template-rows: repeat(8, 1fr) 2fr;
+  align-items: center;
+  justify-items: right;
 }

@@ -68,7 +68,7 @@ const ProductDetails = () => {
           Comments
         </p>
         <ActionButton
-          onClick={(event) => {
+          onClick={() => {
             handlerAddToCart(product);
           }}
           message="Add To Cart"

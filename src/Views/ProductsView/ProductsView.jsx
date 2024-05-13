@@ -1,4 +1,4 @@
-import ProductsList from "../../Components/Lists/Lists.jsx";
+import ProductsList from "../../Components/Lists/ListProducts.jsx";
 import { ButtonLink } from "../../Components/Buttons/Buttons";
 import "./ProductsView.css";
 

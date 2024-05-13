@@ -1,55 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
-import ShoppingCartActions from "/src/Slicers/ShoppingCartSlicer";
-import { ActionButton, ButtonLink } from "../../Components/Buttons/Buttons";
+import { useSelector } from "react-redux";
+import { ButtonLink } from "../../Components/Buttons/Buttons";
 import "./ShoppingCart.css";
-
-const ListShoppingCart = ({ addedProducts }) => {
-  const dispatch = useDispatch();
-
-  const handlerDelete = (index) => {
-    dispatch(ShoppingCartActions.deleteProduct(index));
-  };
-
-  return (
-    <>
-      {addedProducts.map((product, index) => {
-        return (
-          <div key={index.toString()}>
-            <li>
-              <div className="product">
-                <img src={product[0].image} />
-                <p
-                  style={{
-                    width: "95%",
-                    paddingRight: "5%",
-                  }}
-                >
-                  {`${index + 1}. ${product[0].title}`}
-                  <br />
-                  Unit Price: ${parseFloat(product[0].price).toFixed(
-                    2
-                  )} USD <br />
-                  Amount:{" "}
-                  <span style={{ fontWeight: "1000" }}>{product[1]}</span>
-                </p>
-              </div>
-              <p style={{ textAlign: "center" }}>
-                ${parseFloat(product[0].price * product[1]).toFixed(2)} USD
-              </p>
-              <ActionButton
-                message={"Delete"}
-                style={{ fontSize: "2vh", padding: "0.5em" }}
-                onClick={() => {
-                  handlerDelete(index);
-                }}
-              />
-            </li>
-          </div>
-        );
-      })}
-    </>
-  );
-};
+import ListOrder from "../../Components/Lists/ListOrder";
 
 const ShoppingCart = () => {
   const addedProducts = useSelector((state) => {
@@ -76,15 +28,7 @@ const ShoppingCart = () => {
       <h1>
         Shopping <span>C</span>art
       </h1>
-      <div className="detailProduts">
-        <ul style={{ textAlign: "center" }}>
-          <li style={{ backgroundColor: "rgb(0,0,0,0.6)" }}>
-            <h2>Product Name</h2>
-            <h2>Partial Price</h2>
-          </li>
-          <ListShoppingCart addedProducts={addedProducts} />
-        </ul>
-      </div>
+      <ListOrder cart={true} />
       <h1 className="priceContainer">Total Price: ${totalPriceCalc()} USD</h1>
       <ButtonLink to="/Checkout" message="Ready To Pay" />
     </div>

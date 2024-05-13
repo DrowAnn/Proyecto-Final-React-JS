@@ -1,4 +1,4 @@
-import "./Lists.css";
+import "./ListProducts.css";
 import { useEffect, useState } from "react";
 import ItemCard from "../ItemCards/ItemCards";
 

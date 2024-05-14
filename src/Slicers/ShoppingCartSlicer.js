@@ -28,6 +28,9 @@ const ShoppingCartSlicer = createSlice({
         state.products[actions.payload][1] -= 1;
       }
     },
+    restartProducts: (state) => {
+      state.products = [];
+    },
   },
 });
 

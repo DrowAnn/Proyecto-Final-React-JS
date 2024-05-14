@@ -16,17 +16,3 @@ export const ActionButton = (props) => {
     </button>
   );
 };
-
-export const SubmitButton = (props) => {
-  return (
-    <Link
-      id={props.id}
-      className="buttonLink"
-      to={props.to}
-      state={props.state}
-      style={props.style}
-    >
-      {props.message}
-    </Link>
-  );
-};

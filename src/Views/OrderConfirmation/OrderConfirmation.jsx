@@ -3,12 +3,17 @@ import TriangleDecoration from "../../Components/TrianglesDecoration/TrianglesDe
 import "./OrderConfirmation.css";
 import { useLocation } from "react-router-dom";
 import UsersDataActions from "/src/Slicers/UsersDataSlicer.js";
+import ShoppingCartActions from "/src/Slicers/ShoppingCartSlicer.js";
+import { useEffect } from "react";
 
 const OrderConfirmation = () => {
   const dispatch = useDispatch();
   const { state } = useLocation();
 
-  dispatch(UsersDataActions.saveData(state));
+  useEffect(() => {
+    dispatch(UsersDataActions.saveData(state));
+    dispatch(ShoppingCartActions.restartProducts());
+  }, []);
 
   return (
     <div className="orderConfirmation">

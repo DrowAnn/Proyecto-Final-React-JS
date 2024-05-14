@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { SubmitButton } from "../Buttons/Buttons";
+import { ActionButton } from "../Buttons/Buttons";
 import "./PaymentForm.css";
+import { Link } from "react-router-dom";
 
 const PaymentForm = () => {
   const [dataForm, setDataForm] = useState({
@@ -22,8 +23,9 @@ const PaymentForm = () => {
   return (
     <form
       className="paymentForm"
-      onChange={(event) => {
+      onSubmit={(event) => {
         event.preventDefault();
+        document.getElementById("submitButton").click();
       }}
     >
       <h1>
@@ -36,6 +38,7 @@ const PaymentForm = () => {
           placeholder="Your name"
           name="name"
           onChange={handlerChange}
+          required
         />
         <label>Last Name: </label>
         <input
@@ -43,6 +46,7 @@ const PaymentForm = () => {
           placeholder="Your last name"
           name="lastName"
           onChange={handlerChange}
+          required
         />
         <label>Id Number: </label>
         <input
@@ -50,6 +54,7 @@ const PaymentForm = () => {
           placeholder="123456789"
           name="idNumber"
           onChange={handlerChange}
+          required
         ></input>
         <label>Email: </label>
         <input
@@ -57,6 +62,7 @@ const PaymentForm = () => {
           placeholder="name@rdstore.com"
           name="email"
           onChange={handlerChange}
+          required
         />
         <label>Phone Number: </label>
         <input
@@ -64,6 +70,7 @@ const PaymentForm = () => {
           placeholder="57 321 4567890"
           name="phoneNumber"
           onChange={handlerChange}
+          required
         />
         <label>Adress: </label>
         <input
@@ -71,6 +78,7 @@ const PaymentForm = () => {
           placeholder="Shipping place"
           name="address"
           onChange={handlerChange}
+          required
         />
         <label>City: </label>
         <input
@@ -78,6 +86,7 @@ const PaymentForm = () => {
           placeholder="Shipping city"
           name="city"
           onChange={handlerChange}
+          required
         />
         <label>Country: </label>
         <input
@@ -85,17 +94,23 @@ const PaymentForm = () => {
           placeholder="Shipping country"
           name="country"
           onChange={handlerChange}
+          required
         />
-        <SubmitButton
-          id="submit"
+        <ActionButton
           style={{
             gridColumn: "span 2 / 3",
             justifySelf: "center",
             paddingTop: "0.8vw",
             paddingBottom: "0.8vw",
           }}
-          to="/OrderConfirmation"
           message="Submit"
+        />
+        <Link
+          id="submitButton"
+          style={{
+            display: "none",
+          }}
+          to="/OrderConfirmation"
           state={dataForm}
         />
       </div>
